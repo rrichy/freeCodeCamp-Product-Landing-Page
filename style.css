@@ -7,12 +7,37 @@ body {
     font-family: 'Vidaloka', serif;
 }
 
+iframe {
+    height: 300px;
+    margin: 10px;
+}
+
+h2 {
+    margin-left: 10px;
+}
+
+sup {
+    font-size: .7rem;
+}
+
+sup:hover {
+    color: cornflowerblue;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 #header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     background: linear-gradient(0deg,rgb(243, 224, 235), rgba(184, 48, 139, 0));
+    position: fixed;
 }
 
 #header-image {
@@ -24,14 +49,42 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    min-width: 322px;
+    width: 332px;
+    /* min-width: 322px; */
     height: 100px;
 }
 
-iframe {
-    height: 300px;
-    /* width: 168px; */
-    margin: 10px;
+#videos-section {
+    margin-top: 100px;
+}
+
+#videos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#form-section > h2{
+    text-align: center;
+}
+
+#email {
+    margin: auto;
+    width: 350px;
+    height: 1.6rem;
+}
+
+#submit {
+    padding: 0 20px;
+    height: 2.3rem;
+    width: 200px;
+    margin: 5px auto 30px auto;
+    /* margin-bottom: 30px; */
+    font-size: 1rem;
+    font-weight: 700;
+    border: 1px black solid;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 .nav-link {
@@ -57,7 +110,7 @@ iframe {
     flex-wrap: wrap;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 790px){
     #header {
         flex-direction: column;
     }
@@ -66,10 +119,15 @@ iframe {
         height: 50px;
         width: 100%;
         max-width: 425px;
+        flex-direction: row;
         justify-content: space-evenly;
     }
 
     .nav-link {
         height: 40px;
+    }
+
+    #videos-section {
+        margin-top: 150px;
     }
 }

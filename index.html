@@ -14,14 +14,39 @@
         <nav id="nav-bar">
             <a href="#" class="nav-link">Home</a>
             <a href="#" class="nav-link">Products</a>
-            <a href="#" class="nav-link">Price List</a>
-            <a href="#" class="nav-link">Send Feedback</a>
+            <a href="https://rrichy.github.io/freeCodeCamp-Tribute-Page/" class="nav-link">Price List</a>
+            <a href="https://rrichy.github.io/freeCodeCamp-Survey-Form/" class="nav-link">Send Feedback</a>
         </nav>
     </header>
-    <section class="flex-item">
-        <iframe src="https://video.fdvo1-1.fna.fbcdn.net/v/t42.9040-2/115880119_710874039497256_5193614543879837485_n.mp4?_nc_cat=108&ccb=2&_nc_sid=985c63&efg=eyJybHIiOjY0NiwicmxhIjo1MTIsInZlbmNvZGVfdGFnIjoic3ZlX3NkIn0%3D&_nc_ohc=4M5rHjyRLV0AX8kAsOA&rl=646&vabr=359&_nc_ht=video.fdvo1-1.fna&oh=776597299b405b100d732a90db8356dc&oe=6013B944" frameborder="0" id="video" allowfullscreen></iframe>
-        <iframe src="https://video.fdvo1-1.fna.fbcdn.net/v/t42.9040-2/115946973_737024613731982_5112997340697806628_n.mp4?_nc_cat=109&ccb=2&_nc_sid=985c63&efg=eyJybHIiOjY5MSwicmxhIjo1MTIsInZlbmNvZGVfdGFnIjoic3ZlX3NkIn0%3D&_nc_ohc=KF-2tFh9RV0AX94FoQd&rl=691&vabr=384&_nc_ht=video.fdvo1-1.fna&oh=c770d0c227e1cfe5efefcc77b2d573fa&oe=6013ACE6" frameborder="0" allowfullscreen></iframe>
-        <iframe src="https://video.fdvo1-1.fna.fbcdn.net/v/t42.9040-2/92483111_251988252639017_636061498073939968_n.mp4?_nc_cat=103&ccb=2&_nc_sid=985c63&efg=eyJybHIiOjUyOSwicmxhIjo1MTIsInZlbmNvZGVfdGFnIjoic3ZlX3NkIn0%3D&_nc_ohc=4TCg16m2kfQAX9pSTP4&rl=529&vabr=294&_nc_ht=video.fdvo1-1.fna&oh=1c3cbd7b4251e7028c31f7c7905ca5a8&oe=6013AED5" frameborder="0" allowfullscreen></iframe>
+    <section id="videos-section">
+        <h2>Videos<sup id="videos-toggle" onclick="hide('videos')" value="1">(hide)</sup></h2>
+        <div id="videos">
+            <iframe src="https://video.fdvo1-1.fna.fbcdn.net/v/t42.9040-2/115880119_710874039497256_5193614543879837485_n.mp4?_nc_cat=108&ccb=2&_nc_sid=985c63&efg=eyJybHIiOjY0NiwicmxhIjo1MTIsInZlbmNvZGVfdGFnIjoic3ZlX3NkIn0%3D&_nc_ohc=4M5rHjyRLV0AX8kAsOA&rl=646&vabr=359&_nc_ht=video.fdvo1-1.fna&oh=776597299b405b100d732a90db8356dc&oe=6013B944" frameborder="0" id="video" allowfullscreen></iframe>
+            <iframe src="https://video.fdvo1-1.fna.fbcdn.net/v/t42.9040-2/115946973_737024613731982_5112997340697806628_n.mp4?_nc_cat=109&ccb=2&_nc_sid=985c63&efg=eyJybHIiOjY5MSwicmxhIjo1MTIsInZlbmNvZGVfdGFnIjoic3ZlX3NkIn0%3D&_nc_ohc=KF-2tFh9RV0AX94FoQd&rl=691&vabr=384&_nc_ht=video.fdvo1-1.fna&oh=c770d0c227e1cfe5efefcc77b2d573fa&oe=6013ACE6" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://video.fdvo1-1.fna.fbcdn.net/v/t42.9040-2/92483111_251988252639017_636061498073939968_n.mp4?_nc_cat=103&ccb=2&_nc_sid=985c63&efg=eyJybHIiOjUyOSwicmxhIjo1MTIsInZlbmNvZGVfdGFnIjoic3ZlX3NkIn0%3D&_nc_ohc=4TCg16m2kfQAX9pSTP4&rl=529&vabr=294&_nc_ht=video.fdvo1-1.fna&oh=1c3cbd7b4251e7028c31f7c7905ca5a8&oe=6013AED5" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <hr>
     </section>
+    <section id="form-section">
+        <h2>Receive Updates from us!</h2>
+        <form action="https://www.freecodecamp.com/email-submit" id="form">
+            <input type="email" id="email" name="email" placeholder="Type your email address here" required>
+            <input type="submit" id="submit" value="Receive Updates">
+        </form>
+    </section>
+    
+    <script>
+        function hide(id){
+            let target = document.getElementById(id);
+            if(target.style.display === 'none'){
+                target.style.display = 'flex';
+                document.getElementById(id + '-toggle').innerHTML = '(hide)';
+            }
+            else{
+                target.style.display = 'none';
+                document.getElementById(id + '-toggle').innerHTML = '(show)';
+            }
+        }
+    </script>
 </body>
 </html>
